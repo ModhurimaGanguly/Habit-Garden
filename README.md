@@ -1,5 +1,4 @@
 # Habit Garden
-#### Video Demo: <URL HERE>
 #### Description:
 
 Habit Garden is a web-based habit tracker built with Python, Flask, and SQLite for CS50x's final project. Rather than reducing habit tracking to a plain checklist and a streak number, Habit Garden represents each habit as a small virtual plant that grows through visible stages — seed, sprout, growing, blooming, and flourishing — as the user's streak builds, and wilts back a stage if a day is missed. The goal was to take something CS50 teaches very directly (a login system, a database-backed CRUD app) and combine it with a simple, motivating visual metaphor, without reaching for any tools or libraries beyond what the course covers.

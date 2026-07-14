@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Habit Garden — My Habits</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <span class="brand">🌱 Habit Garden</span>
+            <a href="/add">+ Add habit</a>
+            <a href="/logout">Logout</a>
+        </nav>
+
+        <div class="container">
+            {% if habits|length == 0 %}
+                <p>No habits yet. <a href="/add">Add your first one</a>.</p>
+            {% endif %}
+
+            <div class="habit-grid">
+                {% for habit in habits %}
+                    <div class="habit-card">
+                        <img class="plant" src="{{ url_for('static', filename='plants/' + habit.stage + '.svg') }}" alt="{{ habit.stage }} plant">
+                        <h3>{{ habit.name }}</h3>
+                        <p>Streak: {{ habit.streak }} day{{ 's' if habit.streak != 1 else '' }}</p>
+                        <p class="stage-label">{{ habit.stage }}</p>
+                        <div class="actions">
+                            <a href="/checkin/{{ habit.id }}">Mark done today</a>
+                            <a href="/history/{{ habit.id }}">History</a>
+                            <a href="/delete/{{ habit.id }}" class="danger">Delete</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f4f8f4;
+    color: #223;
+    margin: 0;
+}
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-page .container {
+    margin: 0;
+    text-align: center;
+}
+
+.auth-page form {
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background: #2f6b3a;
+}
+
+nav .brand {
+    color: white;
+    font-weight: bold;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1,
+h2 {
+    color: #2f6b3a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 320px;
+}
+
+input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.6rem;
+    background: #2f6b3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #245530;
+}
+
+.habit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.habit-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.habit-card h3 {
+    margin: 0.5rem 0 0.2rem;
+}
+
+.stage-label {
+    text-transform: capitalize;
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.actions a {
+    color: #2f6b3a;
+    text-decoration: none;
+}
+
+.actions a.danger {
+    color: #b33;
+}
+
+/* --- Plant growth stages --- */
+
+.plant {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.history-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #ddd;
+}

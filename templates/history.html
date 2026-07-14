@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Habit Garden — History</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <span class="brand">🌱 Habit Garden</span>
+            <a href="/habits">Back to habits</a>
+            <a href="/logout">Logout</a>
+        </nav>
+
+        <div class="container">
+            <h2>Last 7 check-ins</h2>
+            {% if checkins|length == 0 %}
+                <p>No check-ins yet.</p>
+            {% else %}
+                <ul class="history-list">
+                    {% for c in checkins %}
+                        <li>✅ {{ c.date }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </body>
+</html>

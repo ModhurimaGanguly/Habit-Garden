@@ -26,7 +26,3 @@ The biggest decision was how a missed day should affect the streak. My first ins
 I also debated how to visually represent growth. My first version used plain colored `<div>` elements sized differently per stage, purely to get the logic working end-to-end before investing in visuals. Once the underlying streak and check-in logic were solid, I replaced these with small SVG illustrations of a potted plant at each stage — still simple enough to hand-build without any design tools, but far more recognizable as an actual plant than a colored rectangle.
 
 Finally, I considered giving each user a single combined "garden" showing all their habits as one scene, rather than a separate plant per habit. I chose one plant per habit instead, since it maps each visual much more directly and clearly to the specific habit it represents, and was considerably simpler to implement correctly.
-
-## AI usage disclosure
-
-Portions of this project — including the Flask route structure, the SQL schema, the streak-calculation logic, and the plant SVG illustrations — were developed with assistance from Claude (Anthropic). All generated code was reviewed, tested, debugged, and understood by me before submission, in keeping with CS50's policy that such tools may amplify but not replace the student's own work. This disclosure is also noted as a comment at the top of `app.py`.
